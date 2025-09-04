@@ -130,7 +130,8 @@ export default function Spotify() {
                     <View style={styles.signUpContainer}>
                         <Text style={styles.signUpText}>Don't have an account? </Text>
                         <TouchableOpacity>
-                            <Text style={styles.signUpLink}>Sign Up</Text>
+                            <Text style={styles.signUpLink}
+                            onPress={() => router.push('/SpotifyRegistration')}>Sign Up</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

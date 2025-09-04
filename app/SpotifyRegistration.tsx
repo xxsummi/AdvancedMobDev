@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
 
 export default function SpotifyRegistration() {
+    const router = useRouter();
     const [email, setEmail] = useState("");
     const [fullName, setFullName] = useState("");
     const [password, setPassword] = useState("");
@@ -171,7 +173,7 @@ export default function SpotifyRegistration() {
                     {/* Sign Up Button */}
                     <TouchableOpacity
                         style={[styles.signUpButton, isLoading && styles.signUpButtonDisabled]}
-                        onPress={handleRegister}
+                        onPress={() => router.push('/Playlists')}
                         disabled={isLoading}
                     >
                         <Text style={styles.signUpButtonText}>
@@ -202,7 +204,8 @@ export default function SpotifyRegistration() {
                     <View style={styles.signInContainer}>
                         <Text style={styles.signInText}>Already have an account? </Text>
                         <TouchableOpacity>
-                            <Text style={styles.signInLink}>Sign In</Text>
+                            <Text style={styles.signInLink}
+                            onPress={() => router.back()}>Sign In</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
