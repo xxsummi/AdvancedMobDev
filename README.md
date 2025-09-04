@@ -2,7 +2,7 @@
 
 A modern, feature-rich music streaming app built with React Native and Expo, inspired by Spotify's sleek design and user experience.
 
-![App Demo](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-blue)
+![App Demo](https://img.shields.io/badge/Platform-Android-blue)
 ![React Native](https://img.shields.io/badge/React%20Native-0.72-green)
 ![Expo](https://img.shields.io/badge/Expo-SDK%2049-purple)
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
