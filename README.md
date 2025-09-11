@@ -256,3 +256,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Spotify Drawer**  
 <img src="assets/images/drawer.png" alt="Drawer View" width="300" />
+
+**Spotify Tablet Playlists**  
+<img src="assets/images/TabletPlaylists.png" alt="Playlist View" width="500" />
+
+**Spotify Tablet Profile**  
+<img src="assets/images/TabletProfile.png" alt="Profile Screen" width="500" />
+
+**Spotify Tablet Settings**  
+<img src="assets/images/TabletSettings.png" alt="Settings Screen" width="500" />
+
+**Spotify Tablet Drawer**  
+<img src="assets/images/TabletDrawer.png" alt="Drawer View" width="500" />
+
