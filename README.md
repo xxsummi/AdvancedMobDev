@@ -228,3 +228,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Open source contributors
 
 **Note**: This is a educational project created for learning purposes. It is not affiliated with or endorsed by Spotify.
+
+## 📱 Screenshots
+
+**Home Screen**
+![Home Screen](assets/images/Index.png)
+**Component Showcase**
+![ComponentShowcase.png](assets/images/ComponentShowcase.png)
+**Spotify Login**
+![Spotify Login](assets/images/SpotifyLogin.png)
+**Spotify Registration**
+![Spotify Registration](assets/images/SpotifyRegistration.png)
+**Spotify Playlists**
+![Playlist View](assets/images/playlists.png)
+**Spotify Profile**
+![Profile Screen](assets/images/profile.png)
+**Spotify Settings**
+![Settings Screen](assets/images/settings.png)
+**Spotify Drawer**
+![Drawer View](assets/images/drawer.png)
+

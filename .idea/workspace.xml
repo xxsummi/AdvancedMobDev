@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8db4985b-fd7c-44ff-85ba-f634d20c5078" name="Changes" comment="Spotify">
-      <change afterPath="$PROJECT_DIR$/app/Playlists.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/playlists.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/settings.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ComponentShowcase.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/ComponentShowcase.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Index.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Spotify.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Spotify.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/SpotifyRegistration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/SpotifyRegistration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/SpotifyLogin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyRegistration.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/SpotifyRegistration.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tablet_index.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Tablet_index.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,19 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="spotify" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -64,9 +76,15 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;spotify&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/user/Derama/Summi&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/user/Derama/Summi&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
