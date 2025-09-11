@@ -231,20 +231,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📱 Screenshots
 
-**Home Screen**
-![Home Screen](assets/images/Index.png)
-**Component Showcase**
-![ComponentShowcase.png](assets/images/ComponentShowcase.png)
-**Spotify Login**
-![Spotify Login](assets/images/SpotifyLogin.png)
-**Spotify Registration**
-![Spotify Registration](assets/images/SpotifyRegistration.png)
-**Spotify Playlists**
-![Playlist View](assets/images/playlists.png)
-**Spotify Profile**
-![Profile Screen](assets/images/profile.png)
-**Spotify Settings**
-![Settings Screen](assets/images/settings.png)
-**Spotify Drawer**
-![Drawer View](assets/images/drawer.png)
+## 📱 Screenshots
 
+**Home Screen**  
+<img src="assets/images/Index.png" alt="Home Screen" width="300" />
+
+**Component Showcase**  
+<img src="assets/images/ComponentShowcase.png" alt="Component Showcase" width="300" />
+
+**Spotify Login**  
+<img src="assets/images/SpotifyLogin.png" alt="Spotify Login" width="300" />
+
+**Spotify Registration**  
+<img src="assets/images/SpotifyRegistration.png" alt="Spotify Registration" width="300" />
+
+**Spotify Playlists**  
+<img src="assets/images/playlists.png" alt="Playlist View" width="300" />
+
+**Spotify Profile**  
+<img src="assets/images/profile.png" alt="Profile Screen" width="300" />
+
+**Spotify Settings**  
+<img src="assets/images/settings.png" alt="Settings Screen" width="300" />
+
+**Spotify Drawer**  
+<img src="assets/images/drawer.png" alt="Drawer View" width="300" />
