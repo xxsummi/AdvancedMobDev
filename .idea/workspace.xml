@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8db4985b-fd7c-44ff-85ba-f634d20c5078" name="Changes" comment="Spotify">
-      <change afterPath="$PROJECT_DIR$/app/PlaylistScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/AddSong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ClearPlaylistPrompt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ClearedPlaylist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/PlaylistScreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Redo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/RemoveSong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Undo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Playlists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Playlists.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

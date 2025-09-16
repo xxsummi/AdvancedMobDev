@@ -45,13 +45,14 @@ A modern, feature-rich music streaming app built with React Native and Expo, ins
 ## 🏗️ Project Structure
 
 ```
-spotify-clone/
+Summi/
 ├── app/
 │   ├── _layout.tsx              # Root layout with navigation setup
 │   ├── index.tsx                # App entry point
 │   ├── Login.tsx                # Login screen
 │   ├── Registration.tsx         # Registration screen
 │   ├── Playlists.tsx           # Main playlists library
+│   ├── PlaylistScreen.tsx       # Individual playlist management screen
 │   ├── Profile.tsx             # User profile screen
 │   └── Settings.tsx            # Settings and privacy
 ├── assets/
@@ -268,4 +269,41 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Spotify Tablet Drawer**  
 <img src="assets/images/TabletDrawer.png" alt="Tablet Drawer View" width="500" />
+
+
+### 📚 Week 4 Activity 1 – Playlist Management with Persistence
+
+In this activity, we implemented a playlist management system where songs can be added, removed, cleared, and restored with undo/redo functionality.
+
+A key feature is data persistence: after adding songs to a playlist and closing the app, when you reopen it, the songs are still there. This is achieved with local storage so that playlists remain intact across sessions.
+
+## 📱 Screenshots
+
+**Playlist Screen**
+What appears when you select a playlist in Playlists.tsx.
+<img src="assets/images/PlaylistScreen.png" alt="Playlist Screen" width="300" />
+
+**Add Song Popup**
+A pop-up that appears when you click on the add button, showing songs you can add. It checks if the song is already in the playlist before adding.
+<img src="assets/images/AddSong.png" alt="Add Song Popup" width="300" />
+
+**Clear Playlist Prompt**
+A confirmation prompt before completely emptying the playlist.
+<img src="assets/images/ClearPlaylistPrompt.png" alt="Clear Playlist Prompt" width="300" />
+
+**Cleared Playlist**
+An empty playlist shown after clearing all songs.
+<img src="assets/images/ClearedPlaylist.png" alt="Cleared Playlist" width="300" />
+
+**Remove Song**
+A sample of removing a song by swiping left on it.
+<img src="assets/images/RemoveSong.png" alt="Remove Song" width="300" />
+
+**Undo Action**
+Example of undoing a song removal. Here, the song “Back to Friends” by Sombr was restored.
+<img src="assets/images/Undo.png" alt="Undo Action" width="300" />
+
+**Redo Action**
+Example of redoing the last action after an undo. Here, “Back to Friends” by Sombr was removed again.
+<img src="assets/images/Redo.png" alt="Redo Action" width="300" />
 
