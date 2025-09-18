@@ -343,3 +343,38 @@ Example of redoing the last action after an undo. Here, “Back to Friends” by
 
 <img src="assets/images/Redo.png" alt="Redo Action" width="300" />
 
+
+
+---
+
+## 📚 Week 4 Activity 2 – Spotify Profile Creation Form
+
+In this activity, we built a Spotify-inspired profile creation form with **real-time validation, animations, caching, and a dynamic profile preview section**. The form validates inputs instantly, animates on errors, and updates a live preview as the user types or uploads an image.
+
+### 📱 Screenshots
+
+
+
+**Old Profile**  
+This was my profile before updating. Notice that the favorite genres section is missing.
+
+<img src="assets/images/OldProfile.png" alt="Old Profile" width="300" />
+
+
+
+**Edit Profile Form**  
+This is the `EditProfile.tsx` screen. It has input validation with red highlights when requirements are not met and green when they are fulfilled. Invalid submissions trigger a **shake animation** on the field. At the top, a **real-time preview section** updates instantly to reflect edits to the username, email, genres, and profile image. An option to upload a profile image is also available.
+
+<img src="assets/images/EditProfile.png" alt="Edit Profile Form" width="300" />
+
+
+
+**Edited Profile**  
+This shows the profile page after editing. The username, profile image, and favorite genres are updated and displayed correctly.
+
+<img src="assets/images/EditedProfile.png" alt="Edited Profile" width="300" />
+
+### 📝 Validation Logic, Animation, and Preview Update Note
+- **Validation Logic**: The form validates inputs in real-time—username (3–20 characters, alphanumeric/underscores), email (valid format with '@' and domain), and genre (must be selected from the predefined list). Errors appear instantly below each field.
+- **Animation Approach**: `react-native-reanimated` provides smooth shake animations for invalid inputs and fade-in effects for error messages and the preview section, ensuring smooth UX.
+- **Preview Updates**: The profile preview dynamically updates as the user types, displaying username, email, genres, and a genre-specific placeholder image. Updates are optimized using `React.memo` to avoid unnecessary re-renders.  

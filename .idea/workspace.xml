@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8db4985b-fd7c-44ff-85ba-f634d20c5078" name="Changes" comment="Spotify">
+      <change afterPath="$PROJECT_DIR$/app/EditProfile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/EditProfile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/EditedProfile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/OldProfile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
