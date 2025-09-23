@@ -272,7 +272,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 
-
+---
 ## 📚 Week 4 Activity 1 – Playlist Management with Persistence
 
 In this activity, we implemented a playlist management system where songs can be added, removed, cleared, and restored with undo/redo functionality.
@@ -356,7 +356,7 @@ In this activity, we built a Spotify-inspired profile creation form with **real-
 
 
 **Old Profile**  
-This was my profile before updating. Notice that the favorite genres section is missing.
+This was my profile before updating. Notice that the favorite genres section is added.
 
 <img src="assets/images/OldProfile.png" alt="Old Profile" width="300" />
 
