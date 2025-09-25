@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8db4985b-fd7c-44ff-85ba-f634d20c5078" name="Changes" comment="Spotify">
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/AnimatedContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ColorPicker.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ThemeProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ThemeSwitcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/useAppDispatch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/useTheme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/themeSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Playlists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Playlists.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Spotify.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Spotify.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/EditProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/EditProfile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
