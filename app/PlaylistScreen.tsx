@@ -19,6 +19,7 @@ import Animated, {
   Extrapolate
 } from 'react-native-reanimated';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useTheme } from '../hooks/useTheme';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -135,7 +136,7 @@ const initialState = {
 };
 
 // Memoized song item component for performance optimization
-const SongItem = React.memo(({ song, onRemove, index }) => {
+const SongItem = React.memo(({ song, onRemove, index, theme }) => {
   const translateX = useSharedValue(0);
   const opacity = useSharedValue(1);
   const scale = useSharedValue(1);
@@ -208,7 +209,7 @@ const SongItem = React.memo(({ song, onRemove, index }) => {
             <Text style={styles.songArtist} numberOfLines={1}>{song.artist}</Text>
           </View>
           <TouchableOpacity style={styles.moreButton}>
-            <Ionicons name="ellipsis-horizontal" size={20} color="rgba(255, 255, 255, 0.6)" />
+            <Ionicons name="ellipsis-horizontal" size={20} color={theme.colors.textSecondary} />
           </TouchableOpacity>
         </Animated.View>
       </PanGestureHandler>
@@ -219,6 +220,7 @@ const SongItem = React.memo(({ song, onRemove, index }) => {
 export default function PlaylistScreen() {
   const router = useRouter();
   const params = useLocalSearchParams();
+  const { theme } = useTheme();
   const [state, dispatch] = useReducer(playlistReducer, initialState);
   const [searchQuery, setSearchQuery] = useState('');
   const [showAddSongs, setShowAddSongs] = useState(false);
@@ -335,6 +337,244 @@ export default function PlaylistScreen() {
   const canUndo = state.historyIndex >= 0;
   const canRedo = state.historyIndex < state.history.length - 1;
 
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme.colors.background,
+    },
+    loadingContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    loadingText: {
+      color: theme.colors.text,
+      fontSize: 16,
+    },
+    header: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingTop: 50,
+      paddingHorizontal: 16,
+      paddingBottom: 16,
+    },
+    backButton: {
+      padding: 4,
+    },
+    headerCenter: {
+      flex: 1,
+      alignItems: 'center',
+    },
+    headerTitle: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: theme.colors.text,
+    },
+    headerActions: {
+      flexDirection: 'row',
+      gap: 8,
+    },
+    headerButton: {
+      padding: 4,
+    },
+    disabledButton: {
+      opacity: 0.5,
+    },
+    playlistInfo: {
+      alignItems: 'center',
+      paddingHorizontal: 16,
+      paddingVertical: 24,
+    },
+    playlistCoverLarge: {
+      width: 200,
+      height: 200,
+      borderRadius: 8,
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: 16,
+      overflow: 'hidden',
+    },
+    playlistTitleLarge: {
+      fontSize: 24,
+      fontWeight: '700',
+      color: theme.colors.text,
+      textAlign: 'center',
+      marginBottom: 4,
+    },
+    playlistSubtitleLarge: {
+      fontSize: 14,
+      color: theme.colors.textSecondary,
+      textAlign: 'center',
+      marginBottom: 8,
+    },
+    songCount: {
+      fontSize: 14,
+      color: theme.colors.textSecondary,
+    },
+    actionButtons: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingHorizontal: 16,
+      paddingBottom: 24,
+      gap: 16,
+    },
+    playButton: {
+      width: 48,
+      height: 48,
+      borderRadius: 24,
+      backgroundColor: theme.colors.accent,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    shuffleButton: {
+      padding: 12,
+    },
+    addSongButton: {
+      width: 40,
+      height: 40,
+      borderRadius: 20,
+      backgroundColor: theme.colors.surface,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    clearButton: {
+      padding: 12,
+    },
+    emptyState: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingHorizontal: 32,
+    },
+    emptyStateTitle: {
+      fontSize: 20,
+      fontWeight: '600',
+      color: theme.colors.text,
+      marginTop: 16,
+      marginBottom: 8,
+    },
+    emptyStateSubtitle: {
+      fontSize: 16,
+      color: theme.colors.textSecondary,
+      textAlign: 'center',
+    },
+    songsList: {
+      flex: 1,
+    },
+    songsListContent: {
+      paddingHorizontal: 16,
+      paddingBottom: 100,
+    },
+    songItemContainer: {
+      position: 'relative',
+    },
+    deleteButton: {
+      position: 'absolute',
+      right: 16,
+      top: 0,
+      bottom: 0,
+      width: 60,
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 1,
+    },
+    songItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingVertical: 12,
+      backgroundColor: theme.colors.background,
+      zIndex: 2,
+    },
+    songCover: {
+      width: 48,
+      height: 48,
+      borderRadius: 4,
+      marginRight: 12,
+      overflow: 'hidden',
+    },
+    songCoverImage: {
+      width: '100%',
+      height: '100%',
+      resizeMode: 'cover',
+    },
+    songInfo: {
+      flex: 1,
+    },
+    songTitle: {
+      fontSize: 16,
+      fontWeight: '500',
+      color: theme.colors.text,
+      marginBottom: 2,
+    },
+    songArtist: {
+      fontSize: 14,
+      color: theme.colors.textSecondary,
+    },
+    moreButton: {
+      padding: 8,
+    },
+    modalOverlay: {
+      ...StyleSheet.absoluteFillObject,
+      backgroundColor: 'rgba(0, 0, 0, 0.9)',
+      justifyContent: 'flex-end',
+      zIndex: 1000,
+    },
+    modalContent: {
+      backgroundColor: theme.colors.surface,
+      borderTopLeftRadius: 16,
+      borderTopRightRadius: 16,
+      height: '80%',
+      paddingTop: 16,
+    },
+    modalHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingHorizontal: 16,
+      paddingBottom: 16,
+    },
+    modalTitle: {
+      fontSize: 20,
+      fontWeight: '600',
+      color: theme.colors.text,
+    },
+    searchContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: theme.colors.card,
+      marginHorizontal: 16,
+      marginBottom: 24,
+      paddingHorizontal: 12,
+      paddingVertical: 8,
+      borderRadius: 8,
+    },
+    searchInput: {
+      flex: 1,
+      color: theme.colors.text,
+      fontSize: 16,
+      marginLeft: 8,
+    },
+    suggestedTitle: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: theme.colors.text,
+      paddingHorizontal: 16,
+      marginBottom: 16,
+    },
+    suggestedList: {
+      flex: 1,
+    },
+    suggestedSongItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+    },
+    addButton: {
+      padding: 8,
+    },
+  });
+
   if (isLoading) {
     return (
       <View style={[styles.container, styles.loadingContainer]}>
@@ -350,7 +590,7 @@ export default function PlaylistScreen() {
       {/* Header */}
       <Animated.View style={[styles.header, { opacity: headerOpacity }]}>
         <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-          <Ionicons name="chevron-back" size={28} color="#FFFFFF" />
+          <Ionicons name="chevron-back" size={28} color={theme.colors.text} />
         </TouchableOpacity>
 
         <View style={styles.headerCenter}>
@@ -363,7 +603,7 @@ export default function PlaylistScreen() {
             onPress={handleUndo}
             disabled={!canUndo}
           >
-            <Ionicons name="arrow-undo" size={24} color={canUndo ? "#FFFFFF" : "#666666"} />
+            <Ionicons name="arrow-undo" size={24} color={canUndo ? theme.colors.text : theme.colors.textSecondary} />
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -371,11 +611,11 @@ export default function PlaylistScreen() {
             onPress={handleRedo}
             disabled={!canRedo}
           >
-            <Ionicons name="arrow-redo" size={24} color={canRedo ? "#FFFFFF" : "#666666"} />
+            <Ionicons name="arrow-redo" size={24} color={canRedo ? theme.colors.text : theme.colors.textSecondary} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.headerButton}>
-            <Ionicons name="ellipsis-horizontal" size={24} color="#FFFFFF" />
+            <Ionicons name="ellipsis-horizontal" size={24} color={theme.colors.text} />
           </TouchableOpacity>
         </View>
       </Animated.View>
@@ -410,7 +650,7 @@ export default function PlaylistScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.shuffleButton}>
-          <Ionicons name="shuffle" size={20} color="#FFFFFF" />
+          <Ionicons name="shuffle" size={20} color={theme.colors.text} />
         </TouchableOpacity>
 
         <Animated.View style={animatedAddButtonStyle}>
@@ -418,7 +658,7 @@ export default function PlaylistScreen() {
             style={styles.addSongButton}
             onPress={() => setShowAddSongs(true)}
           >
-            <Ionicons name="add" size={20} color="#FFFFFF" />
+            <Ionicons name="add" size={20} color={theme.colors.text} />
           </TouchableOpacity>
         </Animated.View>
 
@@ -432,7 +672,7 @@ export default function PlaylistScreen() {
       {/* Songs List */}
       {state.songs.length === 0 ? (
         <View style={styles.emptyState}>
-          <Ionicons name="musical-notes-outline" size={64} color="rgba(255, 255, 255, 0.3)" />
+          <Ionicons name="musical-notes-outline" size={64} color={theme.colors.textSecondary} />
           <Text style={styles.emptyStateTitle}>No songs yet</Text>
           <Text style={styles.emptyStateSubtitle}>Add some songs to get started</Text>
         </View>
@@ -441,7 +681,7 @@ export default function PlaylistScreen() {
           data={state.songs}
           keyExtractor={item => item.id}
           renderItem={({ item, index }) => (
-            <SongItem song={item} onRemove={handleRemoveSong} index={index} />
+            <SongItem song={item} onRemove={handleRemoveSong} index={index} theme={theme} />
           )}
           style={styles.songsList}
           showsVerticalScrollIndicator={false}
@@ -460,16 +700,16 @@ export default function PlaylistScreen() {
                 setShowAddSongs(false);
                 setSearchQuery('');
               }}>
-                <Ionicons name="close" size={24} color="#FFFFFF" />
+                <Ionicons name="close" size={24} color={theme.colors.text} />
               </TouchableOpacity>
             </View>
 
             <View style={styles.searchContainer}>
-              <Ionicons name="search" size={20} color="rgba(255, 255, 255, 0.6)" />
+              <Ionicons name="search" size={20} color={theme.colors.textSecondary} />
               <TextInput
                 style={styles.searchInput}
                 placeholder="Search songs"
-                placeholderTextColor="rgba(255, 255, 255, 0.6)"
+                placeholderTextColor={theme.colors.textSecondary}
                 value={searchQuery}
                 onChangeText={setSearchQuery}
                 autoFocus
@@ -496,7 +736,7 @@ export default function PlaylistScreen() {
                         style={styles.addButton}
                         onPress={() => handleAddSong(item)}
                       >
-                        <Ionicons name="add-circle-outline" size={24} color="#1DB954" />
+                        <Ionicons name="add-circle-outline" size={24} color={theme.colors.accent} />
                       </TouchableOpacity>
                     </View>
                   )}
@@ -510,241 +750,3 @@ export default function PlaylistScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000000',
-  },
-  loadingContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  loadingText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingTop: 50,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-  },
-  backButton: {
-    padding: 4,
-  },
-  headerCenter: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#FFFFFF',
-  },
-  headerActions: {
-    flexDirection: 'row',
-    gap: 8,
-  },
-  headerButton: {
-    padding: 4,
-  },
-  disabledButton: {
-    opacity: 0.5,
-  },
-  playlistInfo: {
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 24,
-  },
-  playlistCoverLarge: {
-    width: 200,
-    height: 200,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 16,
-    overflow: 'hidden',
-  },
-  playlistTitleLarge: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#FFFFFF',
-    textAlign: 'center',
-    marginBottom: 4,
-  },
-  playlistSubtitleLarge: {
-    fontSize: 14,
-    color: 'rgba(255, 255, 255, 0.6)',
-    textAlign: 'center',
-    marginBottom: 8,
-  },
-  songCount: {
-    fontSize: 14,
-    color: 'rgba(255, 255, 255, 0.6)',
-  },
-  actionButtons: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingBottom: 24,
-    gap: 16,
-  },
-  playButton: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: '#1DB954',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  shuffleButton: {
-    padding: 12,
-  },
-  addSongButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  clearButton: {
-    padding: 12,
-  },
-  emptyState: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 32,
-  },
-  emptyStateTitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: '#FFFFFF',
-    marginTop: 16,
-    marginBottom: 8,
-  },
-  emptyStateSubtitle: {
-    fontSize: 16,
-    color: 'rgba(255, 255, 255, 0.6)',
-    textAlign: 'center',
-  },
-  songsList: {
-    flex: 1,
-  },
-  songsListContent: {
-    paddingHorizontal: 16,
-    paddingBottom: 100,
-  },
-  songItemContainer: {
-    position: 'relative',
-  },
-  deleteButton: {
-    position: 'absolute',
-    right: 16,
-    top: 0,
-    bottom: 0,
-    width: 60,
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 1,
-  },
-  songItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 12,
-    backgroundColor: '#000000',
-    zIndex: 2,
-  },
-  songCover: {
-    width: 48,
-    height: 48,
-    borderRadius: 4,
-    marginRight: 12,
-    overflow: 'hidden',
-  },
-  songCoverImage: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-  },
-  songInfo: {
-    flex: 1,
-  },
-  songTitle: {
-    fontSize: 16,
-    fontWeight: '500',
-    color: '#FFFFFF',
-    marginBottom: 2,
-  },
-  songArtist: {
-    fontSize: 14,
-    color: 'rgba(255, 255, 255, 0.6)',
-  },
-  moreButton: {
-    padding: 8,
-  },
-  modalOverlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.9)',
-    justifyContent: 'flex-end',
-    zIndex: 1000,
-  },
-  modalContent: {
-    backgroundColor: '#1C1C1C',
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
-    height: '80%',
-    paddingTop: 16,
-  },
-  modalHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-  },
-  modalTitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: '#FFFFFF',
-  },
-  searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    marginHorizontal: 16,
-    marginBottom: 24,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 8,
-  },
-  searchInput: {
-    flex: 1,
-    color: '#FFFFFF',
-    fontSize: 16,
-    marginLeft: 8,
-  },
-  suggestedTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#FFFFFF',
-    paddingHorizontal: 16,
-    marginBottom: 16,
-  },
-  suggestedList: {
-    flex: 1,
-  },
-  suggestedSongItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  addButton: {
-    padding: 8,
-  },
-});
