@@ -378,3 +378,152 @@ This shows the profile page after editing. The username, profile image, and favo
 - **Validation Logic**: The form validates inputs in real-time—username (3–20 characters, alphanumeric/underscores), email (valid format with '@' and domain), and genre (must be selected from the predefined list). Errors appear instantly below each field.
 - **Animation Approach**: `react-native-reanimated` provides smooth shake animations for invalid inputs and fade-in effects for error messages and the preview section, ensuring smooth UX.
 - **Preview Updates**: The profile preview dynamically updates as the user types, displaying username, email, genres, and a genre-specific placeholder image. Updates are optimized using `React.memo` to avoid unnecessary re-renders.  
+
+
+
+---
+
+## 📚 Week 5 Activity 1 – Theme Switcher
+
+In this activity, we implemented a comprehensive theme switching system using Redux Toolkit for state management. The app supports light, dark, and custom themes with smooth animated transitions powered by react-native-reanimated. Theme preferences are persisted using AsyncStorage, ensuring user selections remain intact across app sessions. The theme switcher includes a color picker for custom accent colors and provides seamless UI updates across all screens.
+
+### 📱 Screenshots
+
+
+
+**Sign In Screens**
+
+Authentication interface demonstrating Redux-powered theme switching with smooth animated transitions. The screens showcase real-time theme updates with proper contrast ratios and accessibility compliance across all three theme variations.
+
+<img src="assets/images/week5-activity1/signin-light.png" alt="Sign In Light Theme" width="250" /> <img src="assets/images/week5-activity1/dark/SpotifyLogin.png" alt="Sign In Dark Theme" width="250" /> <img src="assets/images/week5-activity1/signin.png" alt="Sign In Custom Theme" width="250" />
+
+
+
+
+**Registration Screens**
+
+User registration forms with persistent theme preferences using AsyncStorage. Form validation and input styling automatically adapt to the selected theme, maintaining consistent user experience across theme changes.
+
+<img src="assets/images/week5-activity1/registration-light.png" alt="Registration Light Theme" width="250" /> <img src="assets/images/week5-activity1/dark/SpotifyRegistration.png" alt="Registration Dark Theme" width="250" /> <img src="assets/images/week5-activity1/registration.png" alt="Registration Custom Theme" width="250" />
+
+
+
+
+**Playlists Screens**
+
+Main library interface showcasing dynamic theme application to complex UI components. Playlist cards, navigation elements, and text maintain optimal readability while preserving Spotify's visual hierarchy across all themes.
+
+<img src="assets/images/week5-activity1/playlists-light.png" alt="Playlists Light Theme" width="250" /> <img src="assets/images/week5-activity1/dark/playlists.png" alt="Playlists Dark Theme" width="250" /> <img src="assets/images/week5-activity1/playlists.png" alt="Playlists Custom Theme" width="250" />
+
+
+
+
+**Profile Screens**
+
+User profile interface with theme-aware styling for profile images, text elements, and interactive components. The screens demonstrate seamless theme integration with user-generated content and personalized elements.
+
+<img src="assets/images/week5-activity1/profile-light.png" alt="Profile Light Theme" width="250" /> <img src="assets/images/week5-activity1/dark/profile.png" alt="Profile Dark Theme" width="250" /> <img src="assets/images/week5-activity1/profile.png" alt="Profile Custom Theme" width="250" />
+
+
+
+
+**Edit Profile Screens**
+
+Profile editing interface with real-time theme updates and form validation. Input fields, buttons, and preview sections dynamically adjust their appearance while maintaining functionality across theme switches.
+
+<img src="assets/images/week5-activity1/editprofile-light.png" alt="Edit Profile Light Theme" width="250" /> <img src="assets/images/week5-activity1/dark/EditProfile.png" alt="Edit Profile Dark Theme" width="250" /> <img src="assets/images/week5-activity1/editprofile.png" alt="Edit Profile Custom Theme" width="250" />
+
+
+
+
+**Color Picker**
+
+Custom theme creation interface allowing users to select accent colors with real-time preview. The color picker demonstrates advanced theme customization with immediate visual feedback and persistent storage of user preferences.
+
+<img src="assets/images/week5-activity1/colorpicker-light.png" alt="Color Picker Light Theme" width="250" /> <img src="assets/images/week5-activity1/dark/colorpicker.png" alt="Color Picker Dark Theme" width="250" /> <img src="assets/images/week5-activity1/colorpicker.png" alt="Color Picker Custom Theme" width="250" />
+
+---
+
+## 📚 Week 5 Activity 2 – Camera with Filters
+
+In this activity, we integrated a camera system with real-time filters and photo editing capabilities using expo-camera. The implementation includes a camera interface with capture functionality, real-time grayscale and sepia filters with adjustable intensity sliders, and comprehensive photo editing tools for cropping and rotating captured images. All edited photos are saved locally with optimized performance using React.memo for smooth filter previews.
+
+### 📱 Screenshots
+
+
+
+**Camera Option**
+
+Profile photo selection interface integrated with the edit profile workflow. Users can choose between gallery selection and camera capture, with the camera option providing direct access to the filtering system for immediate photo enhancement.
+
+<img src="assets/images/week5-activity2/cameraoption.png" alt="Camera Option" width="300" />
+
+
+
+
+**Camera Interface**
+
+Real-time camera preview with live filter application and adjustable intensity controls. The interface features grayscale and sepia filters with smooth slider interactions, optimized using React.memo for performance during real-time preview updates.
+
+<img src="assets/images/week5-activity2/camera.png" alt="Camera Interface" width="300" />
+
+
+
+
+**Photo Editor**
+
+Comprehensive photo editing suite with crop and rotate functionality for captured images. The editor provides precise control over image composition with touch-based manipulation and saves edited photos locally for immediate use in profile updates.
+
+<img src="assets/images/week5-activity2/editphoto.png" alt="Photo Editor" width="300" />
+
+---
+
+## 📚 Week 6 Activity 1 – iOS Deployment with Expo
+
+In this activity, we successfully deployed our Spotify-inspired React Native app to iOS using Expo's development build workflow. Since we continued using Expo instead of ejecting to bare React Native, we utilized Expo's streamlined iOS deployment process which handles code signing, provisioning profiles, and device installation automatically. The app was tested on both iOS simulator and physical devices, ensuring cross-platform compatibility while maintaining all existing features including theme switching, camera functionality, and playlist management.
+
+### 📱 Screenshots
+
+
+
+**Login Screens**
+
+The app's authentication interface running natively on iOS devices, showcasing smooth animations and iOS-specific UI elements like native keyboard handling and status bar integration. Light theme (left) and dark theme (right) demonstrate cross-platform consistency.
+
+<img src="assets/images/week6-activity1/login-light.png" alt="iOS Login Light Theme" width="300" /> <img src="assets/images/week6-activity1/login.png" alt="iOS Login Dark Theme" width="300" />
+
+
+
+
+**Registration Screens**
+
+User registration forms optimized for iOS with native form validation, keyboard avoidance, and iOS-style input focus animations. The screens maintain Spotify's design language while adapting to iOS platform conventions.
+
+<img src="assets/images/week6-activity1/registration-light.png" alt="iOS Registration Light Theme" width="300" /> <img src="assets/images/week6-activity1/registration.png" alt="iOS Registration Dark Theme" width="300" />
+
+
+
+
+**Playlists Screens**
+
+The main playlist library displaying seamless scrolling performance and iOS-native gestures. Features include pull-to-refresh, smooth list animations, and proper safe area handling for different iPhone models including notched devices.
+
+<img src="assets/images/week6-activity1/playlists-light.png" alt="iOS Playlists Light Theme" width="300" /> <img src="assets/images/week6-activity1/playlists.png" alt="iOS Playlists Dark Theme" width="300" />
+
+
+
+
+**Profile Screens**
+
+User profile interface with iOS-optimized image handling, native photo picker integration, and smooth transition animations. The profile displays user information with proper iOS typography and spacing guidelines.
+
+<img src="assets/images/week6-activity1/profile-light.png" alt="iOS Profile Light Theme" width="300" /> <img src="assets/images/week6-activity1/profile.png" alt="iOS Profile Dark Theme" width="300" />
+
+
+
+
+**Individual Playlist**
+
+Detailed playlist management screen featuring iOS-native swipe gestures for song removal, haptic feedback integration, and optimized performance for large song lists. Demonstrates the app's playlist functionality working seamlessly on iOS.
+
+<img src="assets/images/week6-activity1/playlist-light.png" alt="iOS Playlist Light Theme" width="300" /> <img src="assets/images/week6-activity1/playlist.png" alt="iOS Playlist Dark Theme" width="300" />
