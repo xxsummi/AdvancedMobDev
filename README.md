@@ -20,7 +20,7 @@ The goal was to make the app more interactive and responsive to the user's envir
 ### 1️⃣ Map Integration
 I integrated a map into the app showing **my real-time location** and added **custom markers** for three mock points of interest to make the map engaging.  
 
-![Map Screen](./assets/images/MapApp/MapScreen.png)
+![Map Screen](./MyMapApp/assets/images/MapApp/MapScreen.png)
 
 ---
 
@@ -28,14 +28,14 @@ I integrated a map into the app showing **my real-time location** and added **cu
 - Added **zoom** and **pan controls** for smooth navigation.  
 - Implemented **geofencing alerts** when entering or leaving predefined areas (100-meter radius around markers).  
 
-![Geofence Alert](./assets/images/MapApp/GeofenceAlert.png)
+![Geofence Alert](./MyMapApp/assets/images/MapApp/GeofenceAlert.png)
 
 ---
 
 ### 3️⃣ Map Customization
 - Applied a **dark/high-contrast map style** to enhance readability and visual appeal.  
 
-![Map App Index](./assets/images/MapApp/index.png)
+![Map App Index](./MyMapApp/assets/images/MapApp/index.png)
 
 ---
 
