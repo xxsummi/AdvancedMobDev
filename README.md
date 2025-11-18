@@ -17,8 +17,9 @@ The goal was to make the app more interactive and responsive to the user's envir
 
 ## 🚀 Features Implemented
 
-### 1️⃣ Map Integration
-I integrated a map into the app showing **my real-time location** and added **custom markers** for three mock points of interest to make the map engaging.  
+### 1️⃣ Map Integration & Map Customization
+- I integrated a map into the app showing **my real-time location** and added **custom markers** for three mock points of interest to make the map engaging.  
+- Applied a **dark/high-contrast map style** to enhance readability and visual appeal.  
 
 ![Map Screen](./MyMapApp/assets/images/MapApp/MapScreen.png)
 
@@ -32,8 +33,8 @@ I integrated a map into the app showing **my real-time location** and added **cu
 
 ---
 
-### 3️⃣ Map Customization
-- Applied a **dark/high-contrast map style** to enhance readability and visual appeal.  
+### 3️⃣ Navigation to Map Screen
+- Implemented index.tsx with button that navigates to the Map Screen.
 
 ![Map App Index](./MyMapApp/assets/images/MapApp/index.png)
 
